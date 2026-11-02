@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Nexus Engine",
+    "description": "A high-performance **modular edge router** designed for microsecond latency and intelligent request routing.",
+    "details": "Nexus Engine delivers zero-overhead request dispatching with dynamic worker thread pooling, WebSocket multiplexing, and custom Lua scripting hooks. Built from the ground up for developer productivity with automatic hot-reloading and distributed tracing.",
+    "tech": ["TypeScript", "Next.js", "Rust", "WebSockets"],
+    "url": {
+      "git": "https://github.com/joydeepbanik/nexus-engine",
+      "live": "https://joydeepbanik.me"
+    },
+    "image": "/project-1.png",
+    "platform": "Open Source",
+    "date": "2024 - Present",
+    "status": true
+  },
+  {
+    "title": "Pulse Analytics",
+    "description": "An interactive real-time telemetry dashboard providing **instant visual metrics** for distributed systems.",
+    "details": "Pulse Analytics aggregates server metrics, memory pressure, and event streams into responsive charts with zero external runtime dependencies. Features include anomaly alerting, historical snapshots, and custom metrics querying via an ergonomic GraphQL interface.",
+    "tech": ["React", "Tailwind CSS", "Go", "Docker"],
+    "url": {
+      "git": "https://github.com/joydeepbanik/pulse-analytics",
+      "live": "https://joydeepbanik.me"
+    },
+    "image": "/project-2.png",
+    "platform": "Web App",
+    "date": "2024",
+    "status": true
+  }
+]
