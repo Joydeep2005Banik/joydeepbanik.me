@@ -89,7 +89,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
       <div className="mb-8">
         <Link href="/blog" className="btn-ghost">
           <ArrowLeft className="w-3.5 h-3.5" />
-          <span>Back to blogs</span>
+          <span>Back to experiences</span>
         </Link>
       </div>
 

@@ -6,19 +6,19 @@ import BlogContent from "./BlogContent";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Articles about software engineering, web performance, and developer tooling by Joydeep Banik.",
+  title: "Experiences",
+  description: "Articles and experiences about software engineering, web performance, and developer tooling by Joydeep Banik.",
   alternates: {
     canonical: "https://joydeepbanik.me/blog",
   },
   openGraph: {
-    title: "Blog | Joydeep Banik",
-    description: "Articles about software engineering, web performance, and developer tooling by Joydeep Banik.",
+    title: "Experiences | Joydeep Banik",
+    description: "Articles and experiences about software engineering, web performance, and developer tooling by Joydeep Banik.",
     url: "https://joydeepbanik.me/blog",
   },
   twitter: {
-    title: "Blog | Joydeep Banik",
-    description: "Articles about software engineering, web performance, and developer tooling by Joydeep Banik.",
+    title: "Experiences | Joydeep Banik",
+    description: "Articles and experiences about software engineering, web performance, and developer tooling by Joydeep Banik.",
   },
 };
 

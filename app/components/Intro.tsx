@@ -80,7 +80,7 @@ export default function Intro() {
             <span className="font-medium text-primary">
               <Skills />
             </span>{" "}
-            and other developer tooling. I also occasionally write{" "}
+            and other developer tooling. I also occasionally share my{" "}
             <Link
               href="/blog"
               className="underline underline-offset-4 decoration-1 transition-colors hover:text-primary"
@@ -89,7 +89,7 @@ export default function Intro() {
                 textDecorationColor: "var(--border)",
               }}
             >
-              blogs
+              experiences
             </Link>
             .
           </p>

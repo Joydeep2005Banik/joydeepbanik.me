@@ -7,7 +7,7 @@ export default function Blogs() {
 
   return (
     <section className="mt-8 sm:mt-12 md:mt-16">
-      <p className="section-header mb-4 sm:mb-7">Recent Writing</p>
+      <p className="section-header mb-4 sm:mb-7">Experiences</p>
 
       <div className="space-y-4 sm:space-y-6">
         {blogPosts.map((post) => (
@@ -62,7 +62,7 @@ export default function Blogs() {
 
       <div className="mt-4 sm:mt-6">
         <Link href="/blog" className="btn-ghost text-sm sm:text-base">
-          show all posts
+          show all experiences
         </Link>
       </div>
     </section>

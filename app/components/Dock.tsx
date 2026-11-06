@@ -80,7 +80,7 @@ const MAGNETIC_RANGE = 120;
 
 const dockItems = [
   { href: "/", label: "Home", icon: HomeIcon },
-  { href: "/blog", label: "Blog", icon: NotebookText },
+  { href: "/blog", label: "Experiences", icon: NotebookText },
   { href: "/projects", label: "Projects", icon: Layers },
   { href: "/contact", label: "Contact", icon: MessageCircle },
 ];

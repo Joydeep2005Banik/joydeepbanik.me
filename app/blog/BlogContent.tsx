@@ -27,7 +27,7 @@ export default function BlogContent({ posts }: { posts: BlogPost[] }) {
         <span>Back</span>
       </Link>
 
-      <p className="section-header">Blog</p>
+      <p className="section-header">Experiences</p>
 
       {allTags.length > 0 && (
         <div className="flex flex-wrap items-center gap-2 pb-1">
