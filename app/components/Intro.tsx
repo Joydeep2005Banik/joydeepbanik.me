@@ -53,7 +53,7 @@ export default function Intro() {
             Hi, I&apos;m <ScrambleHeading />
           </h1>
           <p className="mt-4 max-w-xl text-xl leading-relaxed text-secondary">
-            Full stack developer &amp; software enthusiast.
+            Back-end &amp; Applied AI/ML Developer.
           </p>
           <p className="mt-4 text-base" style={{ color: "var(--text-tertiary)" }}>
             @joydeepbanik

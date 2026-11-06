@@ -1,5 +1,11 @@
-import { RiNextjsLine, RiGithubLine, RiReactjsLine } from "react-icons/ri";
-import { SiTypescript } from "react-icons/si";
+import { RiNextjsLine, RiGithubLine } from "react-icons/ri";
+import {
+  SiPython,
+  SiTypescript,
+  SiPostgresql,
+  SiDocker,
+  SiPytorch,
+} from "react-icons/si";
 
 interface Skill {
   name: string;
@@ -8,9 +14,12 @@ interface Skill {
 
 export default function Skills() {
   const skills: Skill[] = [
+    { name: "Python", icon: SiPython },
     { name: "Next.js", icon: RiNextjsLine },
     { name: "TypeScript", icon: SiTypescript },
-    { name: "React", icon: RiReactjsLine },
+    { name: "PostgreSQL", icon: SiPostgresql },
+    { name: "Docker", icon: SiDocker },
+    { name: "PyTorch", icon: SiPytorch },
     { name: "GitHub Actions", icon: RiGithubLine },
   ];
 
