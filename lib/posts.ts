@@ -19,6 +19,18 @@ function getPostsDirectory(): string {
   return localPosts;
 }
 
+function parseSortDate(dateStr: string): number {
+  if (!dateStr) return 0;
+  if (/present/i.test(dateStr)) return Number.MAX_SAFE_INTEGER;
+  const parts = dateStr.split(/[-–—]+/);
+  const target = parts[0]?.trim();
+  const parsed = new Date(target).getTime();
+  if (!isNaN(parsed)) return parsed;
+  const years = dateStr.match(/\b(19|20)\d{2}\b/g);
+  if (years && years.length > 0) return new Date(years[0]).getTime();
+  return 0;
+}
+
 export function getAllPosts(): BlogPost[] {
   try {
     const postsDirectory = getPostsDirectory();
@@ -47,7 +59,7 @@ export function getAllPosts(): BlogPost[] {
       }
     }
 
-    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    return posts.sort((a, b) => parseSortDate(b.date) - parseSortDate(a.date));
   } catch (error) {
     console.error("Error reading posts:", error);
     return [];
