@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { createPortal } from "react-dom";
 
 const API_URL =
-  "https://github-contributions-api.jogruber.de/v4/joydeepbanik?y=last";
+  "https://github-contributions-api.jogruber.de/v4/Joydeep2005Banik?y=last";
 
 interface DayData {
   date: string;
