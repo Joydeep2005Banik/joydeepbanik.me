@@ -70,34 +70,23 @@ export default function Intro() {
       <div className="mt-4 md:mt-16 max-w-3xl space-y-4 md:space-y-5">
         <ScrollReveal>
           <p className="text-base md:text-lg lg:text-xl leading-relaxed">
-            I&apos;m a <Age /> year old software engineer focused on building clean,
-            responsive, and performant web products.
+            I&apos;m a <Age /> year old software developer focused on architecting distributed backend services,
+            cloud systems, and applied machine learning pipelines.
           </p>
         </ScrollReveal>
         <ScrollReveal>
           <p className="text-base md:text-lg lg:text-xl leading-relaxed">
-            I build modern applications with{" "}
+            I build high-performance systems with{" "}
             <span className="font-medium text-primary">
               <Skills />
             </span>{" "}
-            and other developer tooling. I also occasionally share my{" "}
-            <Link
-              href="/blog"
-              className="underline underline-offset-4 decoration-1 transition-colors hover:text-primary"
-              style={{
-                color: "var(--text)",
-                textDecorationColor: "var(--border)",
-              }}
-            >
-              experiences
-            </Link>
-            .
+            and other developer tooling. I also publish research in computer vision.
           </p>
         </ScrollReveal>
         <ScrollReveal>
           <p className="text-base md:text-lg lg:text-xl leading-relaxed">
-            Currently working on full stack projects, exploring AI tooling, and crafting
-            fast, accessible web experiences with fluid motion and delightful micro-interactions.
+            Currently engineering event-driven tournament engines, building asynchronous terminal tools with
+            multi-LLM runtime abstractions, and working with cloud telemetry.
           </p>
         </ScrollReveal>
       </div>

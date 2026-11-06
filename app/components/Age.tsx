@@ -6,7 +6,7 @@ export default function Age() {
   const [age, setAge] = useState<string>("21");
 
   useEffect(() => {
-    const dob = new Date("2004-01-15");
+    const dob = new Date("2005-07-20");
     const updateAge = () => {
       const now = new Date();
       const msPerDay = 1000 * 60 * 60 * 24;
