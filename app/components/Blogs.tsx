@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Calendar, Clock, Tag } from "lucide-react";
+import { Calendar, Tag } from "lucide-react";
 import { getTopBlogPosts } from "@/lib/posts";
 
 export default function Blogs() {
@@ -11,10 +11,9 @@ export default function Blogs() {
 
       <div className="space-y-4 sm:space-y-6">
         {blogPosts.map((post) => (
-          <Link
+          <div
             key={post.slug}
-            href={`/blog/${post.slug}`}
-            className="card block p-4 sm:p-6 md:p-8 cursor-pointer"
+            className="card block p-4 sm:p-6 md:p-8"
           >
             <h3 className="text-base sm:text-xl md:text-2xl font-display font-semibold tracking-tight text-primary">
               {post.title}
@@ -32,15 +31,6 @@ export default function Blogs() {
                 />
                 <p className="text-xs sm:text-sm text-tertiary">{post.date}</p>
               </div>
-              <div className="flex items-center gap-1">
-                <Clock
-                  className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0"
-                  style={{ color: "var(--text-tertiary)" }}
-                />
-                <p className="text-xs sm:text-sm text-tertiary">
-                  {post.readTime}
-                </p>
-              </div>
             </div>
 
             {post.tags.length > 0 && (
@@ -56,7 +46,7 @@ export default function Blogs() {
                 ))}
               </div>
             )}
-          </Link>
+          </div>
         ))}
       </div>
 

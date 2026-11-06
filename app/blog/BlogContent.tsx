@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { Calendar, Clock, Tag, X, ArrowLeft } from "lucide-react";
+import { Calendar, Tag, X, ArrowLeft } from "lucide-react";
 import Footer from "../components/Footer";
 import type { BlogPost } from "@/lib/posts";
 
@@ -64,25 +64,15 @@ export default function BlogContent({ posts }: { posts: BlogPost[] }) {
       ) : (
         <div className="space-y-6">
           {filteredPosts.map((post) => (
-            <Link
+            <div
               key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="card block p-4 sm:p-7 md:p-8 cursor-pointer"
+              className="card block p-4 sm:p-7 md:p-8"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
                   <h3 className="text-xl sm:text-2xl font-display font-semibold tracking-tight text-primary">
                     {post.title}
                   </h3>
-                  <span
-                    className="px-2 py-0.5 text-xs rounded-full font-medium"
-                    style={{
-                      backgroundColor: "var(--bg-elevated)",
-                      color: "var(--text-tertiary)",
-                    }}
-                  >
-                    {post.readTime}
-                  </span>
                 </div>
               </div>
 
@@ -97,13 +87,6 @@ export default function BlogContent({ posts }: { posts: BlogPost[] }) {
                     style={{ color: "var(--text-tertiary)" }}
                   />
                   <p className="text-sm text-tertiary">{post.date}</p>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <Clock
-                    className="w-4 h-4"
-                    style={{ color: "var(--text-tertiary)" }}
-                  />
-                  <p className="text-sm text-tertiary">{post.readTime}</p>
                 </div>
               </div>
 
@@ -120,7 +103,7 @@ export default function BlogContent({ posts }: { posts: BlogPost[] }) {
                   ))}
                 </div>
               )}
-            </Link>
+            </div>
           ))}
         </div>
       )}
