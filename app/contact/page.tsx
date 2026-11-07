@@ -32,7 +32,10 @@ export default function Contact() {
     try {
       const res = await fetch(CONTACT_API, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({
           name: name.trim(),
           email: email.trim(),
