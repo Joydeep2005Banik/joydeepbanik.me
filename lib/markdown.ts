@@ -109,7 +109,7 @@ export async function renderMarkdown(content: string): Promise<string> {
 }
 
 export function parseFrontmatter(fileContent: string) {
-  const frontmatterMatch = fileContent.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  const frontmatterMatch = fileContent.match(/^---\r?\n([\s\S]*?)\r?\n---\s*([\s\S]*)$/);
   if (!frontmatterMatch) return null;
 
   const [, frontmatterText, content] = frontmatterMatch;
