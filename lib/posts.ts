@@ -73,7 +73,14 @@ export function getTopBlogPosts(limit = 2): BlogPost[] {
 export function getPostBySlug(slug: string) {
   try {
     const postsDirectory = getPostsDirectory();
-    let filePath = path.join(postsDirectory, `${slug}.mdx`);
+    const decodedSlug = decodeURIComponent(slug);
+    let filePath = path.join(postsDirectory, `${decodedSlug}.mdx`);
+    if (!fs.existsSync(filePath)) {
+      filePath = path.join(postsDirectory, `${decodedSlug}.md`);
+    }
+    if (!fs.existsSync(filePath)) {
+      filePath = path.join(postsDirectory, `${slug}.mdx`);
+    }
     if (!fs.existsSync(filePath)) {
       filePath = path.join(postsDirectory, `${slug}.md`);
     }

@@ -35,12 +35,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const blogPages = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "yearly" as const,
-    priority: 0.7,
-  }));
+  const blogPages = posts.map((post) => {
+    const parsedDate = new Date(post.date);
+    const lastModified = isNaN(parsedDate.getTime()) ? new Date() : parsedDate;
+    return {
+      url: `${baseUrl}/blog/${encodeURIComponent(post.slug)}`,
+      lastModified,
+      changeFrequency: "yearly" as const,
+      priority: 0.7,
+    };
+  });
 
   return [...staticPages, ...blogPages];
 }
