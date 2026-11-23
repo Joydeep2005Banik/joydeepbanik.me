@@ -4,7 +4,8 @@ import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-const CONTACT_API = process.env.NEXT_PUBLIC_CONTACT_API;
+const CONTACT_API =
+  process.env.NEXT_PUBLIC_CONTACT_API || "https://formspree.io/f/mqppobln";
 
 export default function Contact() {
   const [name, setName] = useState("");
