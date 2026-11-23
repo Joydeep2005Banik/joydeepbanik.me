@@ -20,13 +20,8 @@ export default function Contact() {
     setErrorText("");
 
     if (!CONTACT_API) {
-      // Graceful local demo behavior when API is not yet configured
-      setTimeout(() => {
-        setStatus("success");
-        setName("");
-        setEmail("");
-        setMessage("");
-      }, 600);
+      setStatus("error");
+      setErrorText("Contact API endpoint is not configured.");
       return;
     }
 
@@ -47,7 +42,11 @@ export default function Contact() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Something went wrong");
+        const errorMsg =
+          Array.isArray(data.errors) && data.errors.length > 0
+            ? data.errors.map((e: { message?: string }) => e.message).filter(Boolean).join(", ")
+            : data.error || "Failed to send message. Please try again.";
+        throw new Error(errorMsg);
       }
 
       setStatus("success");
